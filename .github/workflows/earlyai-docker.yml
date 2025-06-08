@@ -1,0 +1,12 @@
+name: Run EarlyAI Secure Docker
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-earlyai:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run EarlyAI Docker container
+        run: |
+          docker run --rm ghcr.io/earlyai/vscode-runner-test
