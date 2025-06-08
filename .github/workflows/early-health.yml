@@ -1,0 +1,9 @@
+name: Run EarlyAI Health Check
+on:
+  workflow_dispatch:
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send health check
+        run: curl -X GET https://api.startearly.ai/health
